@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/searce-01/helloworld:latest']
+  args: ['build', '-t', 'gcr.io/searce-01/helloworld:latest', '.']
   
 - name: 'gcr.io/cloud-builders/docker'
   args: ['push', 'gcr.io/searce-01/helloworld:latest']
