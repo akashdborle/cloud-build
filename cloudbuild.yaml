@@ -1,7 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   args: [ 'build', '-t', 'eu.gcr.io/$PROJECT_ID/helloworld:latest', '.' ]
-  
    args: ['beta', 'run', 'deploy', 'helloworld', '--image', 'eu.gcr.io/$PROJECT_ID/helloworld:latest', '--region', 'europe-west1', '--platform', 'managed', '--allow-unauthenticated']
 images:
  - 'eu.gcr.io/$PROJECT_ID/helloworld:latest'
